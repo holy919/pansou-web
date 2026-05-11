@@ -101,8 +101,7 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
 # 暴露端口
 EXPOSE 80 443
 
-# 设置卷挂载点（只挂载/app/data，所有数据都在这里）
-VOLUME ["/app/data"]
+# 如需持久化 /app/data，请在 Railway 控制台中添加 Volume 并挂载到 /app/data
 
 # 设置启动命令
 CMD ["/app/start.sh"]
